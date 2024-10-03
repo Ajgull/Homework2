@@ -10,8 +10,8 @@ class TownCar:
         self.name = name
         self.is_police = is_police
 
-    def go(self, stroke):
-        print(f'{self.name} move {stroke}')
+    def go(self):
+        print(f'{self.color} {self.name} is moving with speed {self.speed}')
 
     def stop(self):
         print(f'{self.name} stopped')
@@ -33,7 +33,7 @@ class SportCar:
         self.is_police = is_police
 
     def go(self, stroke):
-        print(f'{self.name} move {stroke}')
+        print(f'{self.color} {self.name} is moving with speed {self.speed}')
 
     def stop(self):
         print(f'{self.name} stopped')
@@ -55,7 +55,7 @@ class WorkCar:
         self.is_police = is_police
 
     def go(self, stroke):
-        print(f'{self.name} move {stroke}')
+        print(f'{self.color} {self.name} is moving with speed {self.speed}')
 
     def stop(self):
         print(f'{self.name} stopped')
@@ -77,7 +77,7 @@ class PoliceCar:
         self.is_police = is_police
 
     def go(self, stroke):
-        print(f'{self.name} move {stroke}')
+        print(f'{self.color} {self.name} is moving with speed {self.speed}')
 
     def stop(self):
         print(f'{self.name} stopped')
@@ -85,3 +85,6 @@ class PoliceCar:
     def turn(self, stroke):
         print(f'{self.name} go {stroke}')
 
+
+t = TownCar(60, 'red', 'mazda', False)
+t.go()
