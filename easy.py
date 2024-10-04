@@ -1,14 +1,18 @@
-class TownCar:
-    speed = 0
-    color = ''
-    name = ''
-    is_police = False
+class Car:
 
     def __init__(self, speed, color, name, is_police):
         self.speed = speed
         self.color = color
         self.name = name
         self.is_police = is_police
+
+    def good_speed(self) -> bool:
+        if self.speed >= 0 and self.speed <= 80:
+            print(f'{self.name} im moving with good speed {self.speed}')
+            return True
+        else:
+            print(f'{self.name} im moving with too high speed {self.speed}')
+            return False
 
     def go(self):
         print(f'{self.color} {self.name} is moving with speed {self.speed}')
@@ -16,75 +20,36 @@ class TownCar:
     def stop(self):
         print(f'{self.name} stopped')
 
-    def turn(self, stroke):
-        print(f'{self.name} go {stroke}')
+    def turn(self, direction) -> bool:
+        if (direction == 'left') or (direction == 'right') or (direction == 'forward') or (direction == 'back'):
+            print(f'{self.name} go {direction}')
+            return True
+        else:
+            print(f'{self.name} go wrong way')
+            return False
 
 
-class SportCar:
-    speed = 0
-    color = ''
-    name = ''
-    is_police = False
+class TownCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, is_police=False)
 
-    def __init__(self, speed, color, name, is_police):
-        self.speed = speed
-        self.color = color
-        self.name = name
-        self.is_police = is_police
-
-    def go(self, stroke):
-        print(f'{self.color} {self.name} is moving with speed {self.speed}')
-
-    def stop(self):
-        print(f'{self.name} stopped')
-
-    def turn(self, stroke):
-        print(f'{self.name} go {stroke}')
+    def go(self):
+        print('Town car move slow')
 
 
-class WorkCar:
-    speed = 0
-    color = ''
-    name = ''
-    is_police = False
-
-    def __init__(self, speed, color, name, is_police):
-        self.speed = speed
-        self.color = color
-        self.name = name
-        self.is_police = is_police
-
-    def go(self, stroke):
-        print(f'{self.color} {self.name} is moving with speed {self.speed}')
-
-    def stop(self):
-        print(f'{self.name} stopped')
-
-    def turn(self, stroke):
-        print(f'{self.name} go {stroke}')
+class SportCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, is_police=False)
 
 
-class PoliceCar:
-    speed = 0
-    color = ''
-    name = ''
-    is_police = False
-
-    def __init__(self, speed, color, name, is_police):
-        self.speed = speed
-        self.color = color
-        self.name = name
-        self.is_police = is_police
-
-    def go(self, stroke):
-        print(f'{self.color} {self.name} is moving with speed {self.speed}')
-
-    def stop(self):
-        print(f'{self.name} stopped')
-
-    def turn(self, stroke):
-        print(f'{self.name} go {stroke}')
+class WorkCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, is_police=False)
 
 
-t = TownCar(60, 'red', 'mazda', False)
-t.go()
+class PoliceCar(Car):
+    def __init__(self, speed, color, name):
+        super().__init__(speed, color, name, is_police=False)
+
+    def sound(self) -> None:
+        print('Sound of police car')
