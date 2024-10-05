@@ -1,4 +1,5 @@
 from easy import TownCar, PoliceCar, SportCar
+from normal import Game
 
 
 def first():
@@ -16,3 +17,9 @@ def first():
     s = SportCar(120, 'black', 'ferrari')
     if not s.good_speed():
         s.stop()
+
+
+def second():
+    game = Game()
+    game.start()
+

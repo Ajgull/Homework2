@@ -1,6 +1,10 @@
 class Car:
+    speed = 0
+    color = ''
+    name = ''
+    is_police = False
 
-    def __init__(self, speed, color, name, is_police):
+    def __init__(self, speed, color, name, is_police=False):
         self.speed = speed
         self.color = color
         self.name = name
@@ -31,7 +35,7 @@ class Car:
 
 class TownCar(Car):
     def __init__(self, speed, color, name):
-        super().__init__(speed, color, name, is_police=False)
+        super().__init__(speed, color, name)
 
     def go(self):
         print('Town car move slow')
@@ -39,17 +43,17 @@ class TownCar(Car):
 
 class SportCar(Car):
     def __init__(self, speed, color, name):
-        super().__init__(speed, color, name, is_police=False)
+        super().__init__(speed, color, name)
 
 
 class WorkCar(Car):
     def __init__(self, speed, color, name):
-        super().__init__(speed, color, name, is_police=False)
+        super().__init__(speed, color, name)
 
 
 class PoliceCar(Car):
     def __init__(self, speed, color, name):
-        super().__init__(speed, color, name, is_police=False)
+        super().__init__(speed, color, name, is_police=True)
 
     def sound(self) -> None:
         print('Sound of police car')
