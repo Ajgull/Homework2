@@ -1,5 +1,7 @@
-from start import first, second
+from start import first, second, third
 
 # first()
 
-second()
+# second()
+
+third()

@@ -11,7 +11,7 @@ class Car:
         self.is_police = is_police
 
     def good_speed(self) -> bool:
-        if self.speed >= 0 and self.speed <= 80:
+        if (self.speed >= 0) and (self.speed <= 80):
             print(f'{self.name} im moving with good speed {self.speed}')
             return True
         else:

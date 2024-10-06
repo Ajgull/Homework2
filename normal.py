@@ -44,9 +44,9 @@ class Player(Person):
 class Game:
 
     def __init__(self):
-        self.player = Player('player', 100, 10, False)
+        self.player = Player('player', 100, 10, 4)
 
-        self.enemy = Enemy('boss', 100, 0, False)
+        self.enemy = Enemy('boss', 100, 0, 0)
 
     def start(self) -> None:
         while (self.player.is_alive() != 0) and (self.enemy.is_alive() != 0):
