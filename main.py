@@ -1,6 +1,6 @@
-from easy import TownCar, PoliceCar, SportCar
-from normal import Game
+from easy import PoliceCar, SportCar, TownCar
 from hard import Factory
+from normal import Game
 
 
 def first() -> None:
@@ -48,5 +48,5 @@ def main() -> None:
     third()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

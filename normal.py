@@ -18,11 +18,7 @@ class Person:
             print(f'{opponent.name} has {opponent.health} hp')
 
     def _calculate_damage(self, opponent: 'Person') -> int:
-        if opponent.armor > 0:
-            effective_damage = max(self.damage - opponent.armor, 0)
-        else:
-            effective_damage = self.damage
-        return effective_damage
+        return max(self.damage - opponent.armor, 0) if opponent.armor > 0 else self.damage
 
     def is_alive(self) -> bool:
         return self.health > 0

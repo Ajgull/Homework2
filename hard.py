@@ -53,7 +53,7 @@ class Factory:
             t = BallToy(name, color, type_of_toy)
         else:
             print(f'Мы не производим игрушки типа {type_of_toy}')
-            print(f'Тогда мы сделает игрушку типа Animal toy')
+            print('Тогда мы сделает игрушку типа Animal toy')
             t = AnimalToy(name, color, type_of_toy)
 
         self.buy_materials()
