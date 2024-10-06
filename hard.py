@@ -1,42 +1,42 @@
 class Toy:
-    def __init__(self, name: str, color: str, type: str):
+    def __init__(self, name: str, color: str, type_of_toy: str) -> None:
         self.name = name
         self.color = color
-        self.type = type
+        self.type_of_toy = type_of_toy
 
-    def __str__(self):
-        return f'Игрушка : {self.name}, цвет {self.color}, тип {self.type}'
+    def __str__(self) -> str:
+        return f'Игрушка : {self.name}, цвет {self.color}, тип {self.type_of_toy}'
 
     def play(self) -> None:
         pass
 
 
 class CarToy(Toy):
-    def __init__(self, name: str, color: str, type_of_toy: str):
-        super().__init__(name, color, 'car')
+    def __init__(self, name: str, color: str, type_of_toy: str = 'car') -> None:
+        super().__init__(name, color, type_of_toy)
 
     def play(self) -> str:
         return 'Звук работающай машинки'
 
 
 class BallToy(Toy):
-    def __init__(self, name: str, color: str, type_of_toy: str):
-        super().__init__(name, color, 'ball')
+    def __init__(self, name: str, color: str, type_of_toy: str = 'ball') -> None:
+        super().__init__(name, color, type_of_toy)
 
     def play(self) -> str:
         return 'Звук прыгающего мяча'
 
 
 class DollToy(Toy):
-    def __init__(self, name: str, color: str, type_of_toy: str):
-        super().__init__(name, color, 'doll')
+    def __init__(self, name: str, color: str, type_of_toy: str = 'doll') -> None:
+        super().__init__(name, color, type_of_toy)
 
     def play(self) -> str:
         return 'Звук кукол'
 
 
 class AnimalToy(Toy):
-    def __init__(self, name: str, color: str, type_of_toy: str):
+    def __init__(self, name: str, color: str, type_of_toy: str) -> None:
         super().__init__(name, color, type_of_toy)
 
     def play(self) -> str:
